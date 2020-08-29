@@ -1,0 +1,70 @@
+:root {
+  --mainYellow: #f5b971;
+  --mainWhite: #fff;
+  --mainBlue: #0f4c75;
+  --mainGrey: #9b9999;
+  --transGrey: rgba(0, 0, 0, 0.1);
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(./assets/roboto-condensed.light.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: EconomicaBold;
+  src: url(./assets/economica-bold.ttf);
+}
+
+body {
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: RobotoCondensed;
+  background-color: #e8e4e1;
+  /* color: bisque;
+  background-color: rgba(2, 1, 1, 0.76); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: EconomicaBold;
+}
+
+.track {
+  height: 250px;
+  width: 250px;
+  /* margin: 18px;
+  position: relative; */
+  /* display: inline-block; */
+  cursor: pointer;
+}
+
+.track-img {
+  height: 250px;
+  width: 250px;
+}
+
+.track-title{
+  position: absolute;
+  width: 250px;
+  bottom: 0px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.play-icon{
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  color: white;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  padding: 10px;
+  opacity: 0.8;
+}
