@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Card, Media } from 'react-bootstrap';
 
 class Tracks extends Component {
   state = { isPlaying: false, audio: null, playingPreviewUrl: null };
@@ -33,7 +33,7 @@ class Tracks extends Component {
       this.state.isPlaying &&
       this.state.playingPreviewUrl === track.preview_url
     ) {
-      return <span>||</span>;
+      return <span>| |</span>;
     }
     return <span>&#9654;</span>;
   };
@@ -48,19 +48,24 @@ class Tracks extends Component {
 
           return (
             <Col
+              xs={12}
               lg={3}
               key={id}
               onClick={this.playAudio(preview_url)}
-              className="track my-4"
+              className="mt-5"
             >
-              <img
-                src={album.images[0].url}
-                alt="album-pic"
-                className="track-img"
-              />
-              <p className="track-title">{name}</p>
-              <p class="play-icon">{this.playIcon(track)}</p>
-            </Col>
+            
+              {/* // <p className="track-title">{name}</p>
+              // <p className="play-icon">{this.playIcon(track)}</p>  */}
+              <Card>
+                <Card.Img src={album.images[0].url}
+                alt="album-pic"/>
+                <Card.ImgOverlay>
+                  <Card.Title>{name}</Card.Title>
+                  <Card.Text className="play-icon">{this.playIcon(track)}</Card.Text>
+                </Card.ImgOverlay>
+              </Card>
+           </Col>
           );
         })}
       </>
